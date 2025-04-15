@@ -24,8 +24,10 @@ jobs:
 
       - name: Start SUT
         run: |
-          java -jar ./artifacts/app-order.jar &  # Запускаем приложение в фоновом режиме
-          sleep 10  # Даем приложению время на запуск
+          echo "Starting the app..."
+          java -jar ./artifacts/app-order.jar &  
+          sleep 10 
+          echo "App started"
 
 
       - name: Wait for app to be ready
@@ -34,6 +36,7 @@ jobs:
             echo "Waiting for app to be ready..."
             sleep 5
           done
+          echo "App is ready!"
 
 
       - name: Build with Gradle
