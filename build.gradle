@@ -19,13 +19,12 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.29.0'
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
-    testImplementation 'com.codeborne:selenide:5.22.0'
+
 
 }
 
 test {
     useJUnitPlatform()
 
-    systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
-    systemProperty 'selenide.headless', 'true'
+
 }
